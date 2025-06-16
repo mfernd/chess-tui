@@ -29,3 +29,9 @@ jobs:
     needs: build_and_test
     uses: ./.github/workflows/release_cargo.yml
     secrets: inherit
+
+  release_binary:
+    name: Upload binary to new release
+    needs: build_and_test
+    uses: ./.github/workflows/release_binary.yml
+    secrets: inherit
